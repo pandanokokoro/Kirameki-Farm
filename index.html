@@ -1,11 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>持続可能な未来農業を実現 | Kirameki Farm</title>
+    <meta name="description" content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。">
+
+    <!-- ogp -->
+    <meta property="og:title" content="持続可能な未来農業を実現 | Kirameki Farm">
+    <meta property="og:description" content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:site_name" content="Kirameki Farm">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <!-- swiper css-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
+    <link rel="stylesheet" href="/assets/style/style.css">
 </head>
 <body>
-  
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">
+                <img src="/assets/image/top/header_logo.svg" alt="Kirameki Farm">
+            </h1>
+            <img class="hamburger-button" src="/assets/image/top/hamburger-button-icon.svg" alt="">
+
+            <!-- ナビゲーション -->
+            <nav class="nav__group">
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="/">トップ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/price">価格・スペック</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/faq">よくあるご質問</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- メインビジュアル -->
+        <section class="main-visual">
+            <div class="main-visual__wrapper">
+                <h2 class="main-visual__title">持続可能な農業を目指す</h2>
+                <p class="main-visual__text">
+                    キラメキファームは革新的デザインの農業機器で未来の農業を実現。ビッグデータ・自動運転ロボット・リジェネラティブ農業で環境に優しい効率化を目指す。
+                </p>
+            </div>
+            <picture>
+                <source srcset="/assets/image/top/cover_pc.jpg" media="(min-width: 768px)">
+                <img class="main-visual__cover" src="/assets/image/top/cover_sp.jpg" alt="">
+            </picture>
+        </section>
+
+        <!-- 私たちについて -->
+        <section class="about">
+            <h2 class="about__title section-title">
+                <span class="about__title-en section-title__en">About Us</span>
+                <span class="about__title-jp section-title__jp">私たちについて</span>
+            </h2>
+            <div class="about__body">
+                <div class="about__body-content">
+                    <p class="about__body-content-title"><span>キラメキファームは、これからの農業を</span><span>次世代の子どもたちに残すために</span><span>創設されたイノベーションカンパニーです。</span></p>
+                    <p class="about__body-content-text"><span>キラメキファームは革新的デザインと最新技術を活用した農</span><span>業機器メーカーです。未来の農業を実現するために、ビッグ</span><span>データを駆使して省エネルギー・効率化を実現し、自動運転</span><span>技術を搭載したロボットで一年中稼働することができる機器</span><span>を提供します。リジェネラティブ農業を実現する技術を用い</span><span>て、持続可能な農業システムをサポートします。私たちの社</span><span>是は、次世代の子供たちに豊かな地球環境を残すこと。イノ</span><span>ベーションを起こすことで農業に新たな価値を生み出し、地</span><span>球環境保全に貢献することを目指しています。</span></p>
+                </div>
+                <div class="about__body-img">
+                    <img src="/assets/image/top/about_us_pc.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- 選ばれる3つの理由 -->
+        <section class="features">
+            <div class="features__container">
+                <h2 class="features__title section-title">
+                    <span class="features__title-en section-title__en">Features</span>
+                    <span class="features__title-jp section-title__jp">私たちが選ばれる3つの理由</span>
+                </h2>
+                <ul class="features__contents-list">
+                    <li class="features__contents-item">
+                        <picture>
+                            <source srcset="/assets/image/top/feature_pc_01.jpg" media="(min-width: 768px)">
+                            <img src="/assets/image/top/feature_sp_01.jpg" alt="">
+                        </picture>
+                        <p>農業の未来と革新的デザイン性で最新鋭の機能を完備</p>
+                    </li>
+                    <li class="features__contents-item">
+                        <picture>
+                            <source srcset="/assets/image/top/feature_pc_02.jpg" media="(min-width: 768px)">
+                            <img src="/assets/image/top/feature_sp_02.jpg" alt="">
+                        </picture>
+                        <p>ビッグデータを駆使して、省電力・効率化を実現</p>
+                    </li>
+                    <li class="features__contents-item">
+                        <picture>
+                            <source srcset="/assets/image/top/feature_pc_03.jpg" media="(min-width: 768px)">
+                            <img src="/assets/image/top/feature_sp_03.jpg" alt="">
+                        </picture>
+                        <p>自動運転技術を搭載したロボットで一年中稼働することができる</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 製品・サービス紹介 -->
+        <section class="products">
+            <div class="products__container">
+                <h2 class="products__title section-title">
+                    <span class="products__title-en section-title__en">Products / Service</span>
+                    <span class="products__title-ja section-title__jp">製品・サービス紹介</span>
+                </h2>
+                <div class="products__contents-list">
+                    <div class="products__contents-list-col1">
+                        <a class="products__contents-item">
+                            <picture>
+                                <source srcset="/assets/image/top/produces_pc_01.jpg" media="(min-width: 768px)">
+                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_01.jpg" alt="">
+                            </picture>
+                            <div class="products__contents-item-text-wrapper">
+                                <p class="products__contents-item-text">エネルギーセイバー</p>
+                                <p class="products__contents-item-text">農業ドローン</p>
+                            </div>
+                        </a>
+                        <a class="products__contents-item">
+                            <picture>
+                                <source srcset="/assets/image/top/produces_pc_02.jpg" media="(min-width: 768px)">
+                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_02.jpg" alt="">
+                            </picture>
+                            <div class="products__contents-item-text-wrapper">
+                                <p class="products__contents-item-text">
+                                    <span>プログレッシブ</span><span>ハーベストボット</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="products__contents-list-col2">
+                        <a class="products__contents-item">
+                            <picture>
+                                <source srcset="/assets/image/top/produces_pc_03.jpg" media="(min-width: 768px)">
+                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_03.jpg" alt="">
+                            </picture>
+                            <p class="products__contents-item-text">フューチャーファームマスター</p>
+                        </a>
+                        <a class="products__contents-item">
+                            <picture>
+                                <source srcset="/assets/image/top/produces_pc_04.jpg" media="(min-width: 768px)">
+                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_04.jpg" alt="">
+                            </picture>
+                            <p class="products__contents-item-text">ミラクルグローアシスト</p>
+                        </a>
+                        <a class="products__contents-item">
+                            <picture>
+                                <source srcset="/assets/image/top/produces_pc_05.jpg" media="(min-width: 768px)">
+                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_05.jpg" alt="">
+                            </picture>
+                            <p class="products__contents-item-text">インテリジェントプランター</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お客様の事例紹介 -->
+        <section class="case">
+            <div class="case__container">
+                <h2 class="case__title section-title">
+                    <span class="case__title-en section-title__en">Case</span>
+                    <span class="case__title-jp section-title__jp">お客様の事例紹介</span>
+                </h2>
+                <div class="case__contents-list">
+                    <a class="case__contents-item" href="#">
+                        <picture>
+                            <source srcset="/assets/image/top/case_pc_01.jpg" media="(min-width: 768px)">
+                            <img class="case__contents-item-img" src="/assets/image/top/case_sp_01.jpg" alt="">
+                        </picture>
+                        <p class="case__contents-item-text">利用開始後約1年で売り上げが150％増加</p>
+                    </a>
+                    <a class="case__contents-item" href="#">
+                        <picture>
+                            <source srcset="/assets/image/top/case_pc_02.jpg" media="(min-width: 768px)">
+                            <img class="case__contents-item-img" src="/assets/image/top/case_sp_02.jpg" alt="">
+                        </picture>
+                        <p class="case__contents-item-text">無駄な作業が減り、30％のコストカットに成功</p>
+                    </a>
+                    <a class="case__contents-item" href="#">
+                        <picture>
+                            <source srcset="/assets/image/top/case_pc_03.jpg" media="(min-width: 768px)">
+                            <img class="case__contents-item-img" src="/assets/image/top/case_sp_03.jpg" alt="">
+                        </picture>
+                        <p class="case__contents-item-text">24時間対応のサポートデスクがあるのも安心です</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ニュース -->
+        <section class="news">
+            <div class="news__container">
+                <h2 class="news__title section-title">
+                    <span class="news__title-en section-title__en">News</span>
+                    <span class="news__title-jp section-title__jp">お知らせ</span>
+                </h2>
+                <ul class="news__contents-list">
+                    <li class="news__contents-item">
+                        <div class="news__contents-item-wrapper">
+                            <div class="news__contents-item-date">2023.05.15</div>
+                            <div class="news__contents-item-notice">お知らせ</div>
+                        </div>
+                        <a href="#" class="news__contents-item-text">都心で発見！キラメキファームの屋上畑で緑のオアシスが広がる</a>
+                    </li>
+                    <li class="news__contents-item">
+                        <div class="news__contents-item-wrapper">
+                            <div class="news__contents-item-date">2023.04.05</div>
+                            <div class="news__contents-item-notice">ニュースリリース</div>
+                        </div>
+                        <a href="#" class="news__contents-item-text">食の安全を守る！キラメキファーム、農産物の品質管理に力を入れる</a>
+                    </li>
+                    <li class="news__contents-item">
+                        <div class="news__contents-item-wrapper">
+                            <div class="news__contents-item-date">2023.03.12</div>
+                            <div class="news__contents-item-notice">ニュースリリース</div>
+                        </div>
+                        <a href="#" class="news__contents-item-text">害虫撃退！キラメキファームの自然環境に優しい取り組み</a>
+                    </li>
+                    <li class="news__contents-item">
+                        <div class="news__contents-item-wrapper">
+                            <div class="news__contents-item-date">2023.02.01</div>
+                            <div class="news__contents-item-notice">お知らせ</div>
+                        </div>
+                        <a href="#" class="news__contents-item-text">キラメキファーム×最新ドローン技術 目覚ましい成果発表</a>
+                    </li>
+                    <li class="news__contents-item">
+                        <div class="news__contents-item-wrapper">
+                            <div class="news__contents-item-date">2023.01.25</div>
+                            <div class="news__contents-item-notice">ニュースリリース</div>
+                        </div>
+                        <a href="#" class="news__contents-item-text">キラメキファーム、無農薬野菜で子供たちの未来を支える</a>
+                    </li>
+                    <li class="news__contents-item">
+                        <div class="news__contents-item-wrapper">
+                            <div class="news__contents-item-date">2023.01.08</div>
+                            <div class="news__contents-item-notice">お知らせ</div>
+                        </div>
+                        <a href="#" class="news__contents-item-text">キラメキ農法で収穫量2倍！革新的な農業技術が話題</a>
+                    </li>
+                </ul>
+                <a href="#" class="news__button">ニュース一覧へ</a>
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer__container">
+            <a href="#" class="footer__text">価格・スペック</a>
+            <p class="footer__line"></p>
+            <a href="#" class="footer__text">よくあるご質問</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/script/main.js"></script>
 </body>
 </html>
