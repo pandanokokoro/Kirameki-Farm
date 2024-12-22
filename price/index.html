@@ -17,8 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <!-- swiper css-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
@@ -29,7 +31,9 @@
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <img src="/assets/image/top/header_logo.svg" alt="Kirameki Farm">
+                <a href="/">
+                    <img src="/assets/image/top/header_logo.svg" alt="Kirameki Farm">
+                </a>
             </div>
             <img class="hamburger-button" src="/assets/image/top/hamburger-button-icon.svg" alt="">
 
@@ -39,7 +43,7 @@
                     <li class="nav__item">
                         <a href="/">トップ</a>
                     </li>
-                    <li class="nav__item">
+                    <li class="nav__item current">
                         <a href="/price">価格・スペック</a>
                     </li>
                     <li class="nav__item">
@@ -51,13 +55,16 @@
         </div>
     </header>
 
-    <main class="price__main">
+    <main class="main">
         <!-- メインビジュアル -->
         <section class="subsite__main-visual">
-            <img class="subsite__main-visual-img" src="/assets/image/price/main_visual_sp.jpg" alt="">
+            <picture>
+                <source srcset="/assets/image/price/main_visual_pc.jpg" media="(min-width: 768px)">
+                <img class="subsite__main-visual-img" src="/assets/image/price/main_visual_sp.jpg" alt="">
+            </picture>
             <h1 class="subsite__title">価格・スペック</h1>
             <div class="subsite__breadcrumb">
-                <p href="/" class="subsite__breadcrumb-item">トップ</p>
+                <a href="/" class="subsite__breadcrumb-item">トップ</a>
                 <img src="/assets/image/price/arrow.svg" class="subsite__breadcrumb-arrow">
                 <p class="subsite__breadcrumb-item">価格・スペック</p>
             </div>
@@ -73,7 +80,16 @@
                 </div>
                 <ul class="price__gallery-slide">
                     <li class="price__gallery-slide-item">
-                        <img src="/assets/image/price/gallery_sp_01.jpg" alt="">
+                        <picture>
+                            <source srcset="/assets/image/price/gallery_pc_01.jpg" media="(min-width: 768px)">
+                            <img src="/assets/image/price/gallery_sp_01.jpg" alt="">
+                        </picture>
+                    </li>
+                    <li class="price__gallery-slide-item">
+                        <img src="/assets/image/price/gallery_pc_02.jpg" alt="">
+                    </li>
+                    <li class="price__gallery-slide-item">
+                        <img src="/assets/image/price/gallery_pc_03.jpg" alt="">
                     </li>
                 </ul>
             </div>
@@ -89,16 +105,37 @@
                 </div>
                 <ul class="price__feature-contents-list">
                     <li class="price__feature-contents-item">
-                        <img class="price__feature-contents-item-img" src="/assets/image/price/feature_sp_01.jpg" alt="">
-                        <p class="price__feature-contents-item-text">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
+                        <picture>
+                            <source srcset="/assets/image/price/feature_pc_01.jpg" media="(min-width: 768px)">
+                            <img class="price__feature-contents-item-img" src="/assets/image/price/feature_sp_01.jpg" alt="">
+                        </picture>
+                        <p class="price__feature-contents-item-text txt1">
+                            自動操縦が可能で、短時間で大量の農作物
+                            を監視、収穫、播種、散布などの作業がで
+                            きます。
+                        </p>
                     </li>
                     <li class="price__feature-contents-item">
-                        <img class="price__feature-contents-item-img" src="/assets/image/price/feature_sp_02.jpg" alt="">
-                        <p class="price__feature-contents-item-text">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
+                        <picture>
+                            <source srcset="/assets/image/price/feature_pc_02.jpg" media="(min-width: 768px)">
+                            <img class="price__feature-contents-item-img" src="/assets/image/price/feature_sp_02.jpg" alt="">
+                        </picture>
+                        <p class="price__feature-contents-item-text txt2">
+                            高精度のカメラやセンサーを搭載しており、
+                            正確な土壌・作物の情報を収集でき、水
+                            や肥料などの資源を適切に配分できます。
+                        </p>
                     </li>
                     <li class="price__feature-contents-item">
-                        <img class="price__feature-contents-item-img" src="/assets/image/price/feature_sp_03.jpg" alt="">
-                        <p class="price__feature-contents-item-text">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
+                        <picture>
+                            <source srcset="/assets/image/price/feature_pc_03.jpg" media="(min-width: 768px)">
+                            <img class="price__feature-contents-item-img" src="/assets/image/price/feature_sp_03.jpg" alt="">
+                        </picture>
+                        <p class="price__feature-contents-item-text txt3">
+                            必要な場所にだけ肥料や農薬を散布することができます。
+                            これにより、農薬や肥料の過剰使用が抑えられ、
+                            環境負荷やコスト削減に繋がります。
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -112,7 +149,10 @@
                     <div class="separator--green"></div>
                     <div class="separator--grey"></div>
                 </div>
-                <p class="price__retail-price-text">¥550,000 <span>（税込）</span></p>
+                <div class="price__retail-price-text-wrapper">
+                    <p class="price__retail-price-text">¥550,000</p>
+                    <p class="price__retail-price-text-intax">（税込）</p>
+                </div>
             </div>
 
         </section>
@@ -125,7 +165,10 @@
                     <div class="separator--green"></div>
                     <div class="separator--grey"></div>
                 </div>
-                <p class="price__spec-table-title">機体</p>
+                <div class="price__spec-table-title-wrapper">
+                    <p class="price__spec-table-title-line"></p>
+                    <p class="price__spec-table-title">機体</p>
+                </div>
                 <div class="price__spec-table">
                     <div class="price__spec-table-item head">ドローン名</div>
                     <div class="price__spec-table-item">アグリ・ファルコン</div>
@@ -155,13 +198,15 @@
 
     <!-- フッター -->
     <footer class="footer">
-        <a href="#" class="footer__text">価格・スペック</a>
-        <p class="footer__line"></p>
-        <a href="#" class="footer__text">よくあるご質問</a>
+        <div class="footer__container">
+            <a href="#" class="footer__text">価格・スペック</a>
+            <p class="footer__line"></p>
+            <a href="#" class="footer__text">よくあるご質問</a>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="/assets/script/main.js"></script>
 </body>
 </html>

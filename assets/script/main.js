@@ -12,6 +12,16 @@ $(window).on('resize', function() {
     }
 });
 
+// カルーセル
+$(".price__gallery-slide").slick({
+    autoplay: false,
+    dots: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
 // アコーディオン
 $(".faq__accordion-header").on("click", function () {
     // 現在クリックされたヘッダーのコンテンツをトグルする

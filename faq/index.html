@@ -17,8 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <!-- swiper css-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- slick -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.1/destyle.min.css">
@@ -29,20 +31,38 @@
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <img src="/assets/image/top/header_logo.svg" alt="Kirameki Farm">
+                <a href="/">
+                    <img src="/assets/image/top/header_logo.svg" alt="Kirameki Farm">
+                </a>
             </div>
-            <!-- <div class="hamburger-button"> -->
-                <img class="hamburger-button" src="/assets/image/top/hamburger-button-icon.svg" alt="">
-            <!-- </div> -->
+            <img class="hamburger-button" src="/assets/image/top/hamburger-button-icon.svg" alt="">
+
+            <!-- ナビゲーション -->
+            <nav class="nav__group">
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="/">トップ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/price">価格・スペック</a>
+                    </li>
+                    <li class="nav__item current">
+                        <a href="/faq">よくあるご質問</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <main class="faq__main">
+    <main class="main">
         <!-- メインビジュアル -->
         <section class="subsite__main-visual">
-            <img src="/assets/image/faq/main_visual_sp.jpg" class="subsite__main-visual-img" alt="">
+            <picture>
+                <source srcset="/assets/image/faq/main_visual_pc.jpg" media="(min-width: 768px)">
+                <img src="/assets/image/faq/main_visual_sp.jpg" class="subsite__main-visual-img" alt="">
+            </picture>
             <h1 class="subsite__title">よくあるご質問</h1>
             <div class="subsite__breadcrumb">
-                <p href="/" class="subsite__breadcrumb-item">トップ</p>
+                <a href="/" class="subsite__breadcrumb-item">トップ</a>
                 <img src="/assets/image/price/arrow.svg" class="subsite__breadcrumb-arrow" alt="">
                 <p class="subsite__breadcrumb-item">よくあるご質問</p>
             </div>
@@ -52,13 +72,13 @@
         <div class="faq__container">
             <ul class="faq__list">
                 <!-- アコーディオン 1 -->
-                <li class="faq__item">
+                <li class="faq__item faq1">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">ご利用について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle " src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンの主な用途は何ですか？</p>
                     </div>
@@ -71,14 +91,14 @@
                     </div>
                 </li>
                 <!-- アコーディオン 2 -->
-                <li class="faq__item">
+                <li class="faq__item faq2">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">ご利用について</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンの導入による主な利点は何ですか？</p>
                     </div>
@@ -90,14 +110,14 @@
                     </div>
                 </li>
                 <!-- アコーディオン 3 -->
-                <li class="faq__item">
+                <li class="faq__item faq3">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">ご利用について</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンの種類は？</p>
                     </div>
@@ -109,14 +129,14 @@
                     </div>
                 </li>
                 <!-- アコーディオン 4 -->
-                <li class="faq__item">
+                <li class="faq__item faq4">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">ご利用について</p>
                             <p class="faq__tags">使用について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンの価格はどのくらいですか？</p>
                     </div>
@@ -127,13 +147,13 @@
                     </div>
                 </li>
                 <!-- アコーディオン 5 -->
-                <li class="faq__item">
+                <li class="faq__item faq5">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">特別な免許や資格は必要ですか？</p>
                     </div>
@@ -144,13 +164,13 @@
                     </div>
                 </li>
                 <!-- アコーディオン 6 -->
-                <li class="faq__item">
+                <li class="faq__item faq6">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">使用について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンの法規制は何ですか？</p>
                     </div>
@@ -162,13 +182,13 @@
                     </div>
                 </li>
                 <!-- アコーディオン 7 -->
-                <li class="faq__item">
+                <li class="faq__item faq7">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンのバッテリー寿命は？</p>
                     </div>
@@ -179,14 +199,14 @@
                     </div>
                 </li>
                 <!-- アコーディオン 8 -->
-                <li class="faq__item">
+                <li class="faq__item faq8">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">使用について</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">散布する薬剤や肥料の量はどのように制御されますか？</p>
                     </div>
@@ -197,13 +217,13 @@
                     </div>
                 </li>
                 <!-- アコーディオン 9 -->
-                <li class="faq__item">
+                <li class="faq__item faq9">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">データ収集や解析にはどのようなソフトウェアが使用されますか？</p>
                     </div>
@@ -215,14 +235,14 @@
                     </div>
                 </li>
                 <!-- アコーディオン 10 -->
-                <li class="faq__item">
+                <li class="faq__item faq10">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">使用について</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンはどのような気象条件で飛行できますか？</p>
                     </div>
@@ -234,14 +254,14 @@
                     </div>
                 </li>
                 <!-- アコーディオン 11 -->
-                <li class="faq__item">
+                <li class="faq__item faq11">
                     <div class="faq__accordion-header">
                         <div class="faq__accordion-header-wrapper">
                             <p class="faq__icon">Q.</p>
                             <p class="faq__tags">ご利用について</p>
                             <p class="faq__tags">製品について</p>
-                            <img class="faq__toggle active" src="/assets/image/faq/icon_plus.png" alt="">
-                            <img class="faq__toggle minus" src="/assets/image/faq/icon_minus.png" alt="">
+                            <img class="faq__toggle" src="/assets/image/faq/icon_plus.svg" alt="">
+                            <img class="faq__toggle minus active" src="/assets/image/faq/icon_minus.svg" alt="">
                         </div>
                         <p class="faq__question">農業用ドローンのメンテナンスには何が必要ですか？</p>
                     </div>
@@ -254,22 +274,19 @@
                 </li>
             </ul>
         </div>
-
-        <!-- コンタクト -->
-        <section class="contact">
-            <a href="/contact" class="contact__button">お問い合わせ</a>
-        </section>
     </main>
 
     <!-- フッター -->
     <footer class="footer">
-        <a href="#" class="footer__text">価格・スペック</a>
-        <p class="footer__line"></p>
-        <a href="#" class="footer__text">よくあるご質問</a>
+        <div class="footer__container">
+            <a href="#" class="footer__text">価格・スペック</a>
+            <p class="footer__line"></p>
+            <a href="#" class="footer__text">よくあるご質問</a>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="/assets/script/main.js"></script>
 </body>
 </html>
