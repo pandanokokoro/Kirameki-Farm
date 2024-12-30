@@ -1087,6 +1087,7 @@ a {
             font-size: vw(32);
             font-weight: 700;
             font-family: $font-family-en;
+            color: #168352;
             @include mq() {
                 margin-top: mvw(20);
                 font-size: mvw(32);
