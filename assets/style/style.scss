@@ -18,7 +18,7 @@ $breakpoint-md: 768;
 $breakpoint-lg: $pc-content-width;
 // 本番用か否か？本番用の場合は1にする。
 // 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
-$production: 1;
+$production: 0;
 
 
 //-----------------------------------------------------
@@ -106,14 +106,13 @@ $breakpoints: (
         @return max($value1, $value2);
     }
 }
-// global
-// ---------------------------
-
-// font
+/* global
+---------------------------*/
+/* font */
 $font-family-base: 'Noto Sans JP', sans-serif;
 $font-family-en: 'Montserrat', sans-serif;
 
-// base
+/* base */
 body {
     font-family: $font-family-base;
     color: #000;
@@ -126,10 +125,10 @@ a {
     }
 }
 
-// コンポーネント
-// ------------------------------
+/* コンポーネント
+------------------------------*/
 
-// セクションタイトル
+/* セクションタイトル */
 .section-title {
     text-align: center;
 }
@@ -147,13 +146,13 @@ a {
     font-family: $font-family-en;
     color: #168352;
     line-height: 1;
-    letter-spacing: 0.03em;
+    letter-spacing: 0;
     @include mq() {
         font-size: mvw(20);
     }
 }
 
-// セパレートライン
+/* セパレートライン */
 .separator {
     display: flex;
     justify-content: center;
@@ -177,13 +176,13 @@ a {
         }
     }
 }
-// サブサイト メインビジュアル
+/* サブサイト メインビジュアル */
 .subsite {
     &__main-visual {
         padding: vw(19) vw(16) vw(36);
         @include mq() {
             padding: mvw(40) mvw(16) mvw(36) mvw(25);
-            width: mvw(1250);
+            width: 100%;
             margin: 0 auto;
             position: relative;
         }
@@ -241,7 +240,7 @@ a {
     }
 }
 
-// コンタクト
+/* コンタクト */
 .contact {
     width: 100%;
     height: vw(360);
@@ -284,8 +283,8 @@ a {
 }
 
 
-// ヘッダー
-// ------------------------------
+/* ヘッダー
+------------------------------ */
 .header {
     position: fixed;
     width: 100%;
@@ -326,8 +325,8 @@ a {
         display: none;
     }
 }
-// ナビゲーション ハンバーガーメニュー
-// ------------------------------
+/* ナビゲーション ハンバーガーメニュー
+------------------------------ */
 .nav {
     &__group {
     display: none;
@@ -379,16 +378,16 @@ a {
         color: #168352;
     }
 }
-// メイン
-// ------------------------------
+/* メイン
+------------------------------ */
 .main {
     margin-top: vw(63);
     @include mq() {
         margin-top: mvw(114);
     }
 }
-// メインビジュアル
-// ------------------------------
+/* メインビジュアル
+------------------------------ */
 .main-visual {
     padding: vw(20) vw(16) vw(0);
     margin-bottom: vw(53);
@@ -439,8 +438,8 @@ a {
         }
     }
 }
-// 私たちについて
-// ------------------------------
+/* 私たちについて
+------------------------------ */
 .about {
     @include mq(){
         padding-top: mvw(10);
@@ -500,6 +499,9 @@ a {
                     margin-bottom: mvw(26);
                 }
                 & span {
+                    &.block {
+                        display: block;
+                    }
                     @include mq() {
                         font-size: mvw(20);
                         display: block;
@@ -530,8 +532,8 @@ a {
         }
     }
 }
-// 私たちが選ばれる3つの理由
-// ------------------------------
+/* 私たちが選ばれる3つの理由
+------------------------------ */
 .features {
     background-color: #f3f9f6;
     &__container {
@@ -563,10 +565,10 @@ a {
 
     }
     &__contents-item {
-        box-shadow: 0px vw(6) vw(9) rgba(0, 0, 0, 0.1);
+        box-shadow: 0px vw(6) vw(18) rgba(0, 0, 0, 0.1);
         border-radius: vw(24);
         @include mq() {
-            box-shadow: 0 mvw(6) mvw(9) 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 mvw(4) mvw(14) 0 rgba(0, 0, 0, 0.1);
             border-radius: mvw(24);
         }
         &:not(:last-child) {
@@ -605,8 +607,8 @@ a {
         }
     }
 }
-// 製品・サービス紹介
-// ------------------------------
+/* 製品・サービス紹介
+------------------------------ */
 .products {
     &__container {
         padding: vw(54) vw(16) vw(56);
@@ -709,12 +711,12 @@ a {
     margin-bottom: 0;
 }
 
-// お客様の事例紹介
-// ------------------------------
+/* お客様の事例紹介
+------------------------------ */
 .case {
     background-color: #f3f9f6;
     &__container {
-        padding: vw(54) vw(16) vw(46);
+        padding: vw(54) vw(16) vw(48);
         @include mq() {
             padding: mvw(62) mvw(16) mvw(59);
         }
@@ -739,8 +741,14 @@ a {
             }
         }
         &-item {
-            &:not(:last-child) {
+            &:nth-of-type(1) {
                 margin-bottom: vw(26);
+                @include mq() {
+                    margin-bottom: 0;
+                }
+            }
+            &:nth-of-type(2) {
+                margin-bottom: vw(23);
                 @include mq() {
                     margin-bottom: 0;
                 }
@@ -771,12 +779,8 @@ a {
         }
     }
 }
-
-
-
-
-// ニュース
-// ------------------------------
+/* ニュース
+------------------------------ */
 .news {
     &__container {
         padding: vw(54) vw(16) vw(60);
@@ -894,8 +898,8 @@ a {
     }
 }
 
-// フッター
-// ------------------------------
+/* フッター
+------------------------------ */
 .footer {
     width: 100%;
     height: vw(68);
@@ -933,8 +937,8 @@ a {
     }
 }
 
-// 下層ページ price
-// ---------------------------------
+/* 下層ページ price
+--------------------------------- */
 .price {
     // セクションタイトル
     &__section-title {
@@ -991,7 +995,7 @@ a {
             }
         }
     }
-    // 特徴
+    /* 特徴 */
     &__feature {
         margin-bottom: vw(54);
         @include mq() {
@@ -1021,7 +1025,7 @@ a {
                 }
             }
             &-item {
-                margin-bottom: vw(34);
+                margin-bottom: vw(32);
                 @include mq() {
                     margin-bottom: mvw(34);
                     flex-shrink: 0;
@@ -1054,7 +1058,7 @@ a {
             }
         }
     }
-    // 希望小売り価格
+    /* 希望小売り価格 */
     &__retail-price {
         margin-bottom: vw(58);
         @include mq() {
@@ -1101,8 +1105,7 @@ a {
             }
         }
     }
-
-    // スペック
+    /* スペック */
 
     &__spec {
         margin-bottom: vw(62);
@@ -1197,7 +1200,7 @@ a {
         }
     }
 }
-// スリック
+/* スリック */
 .slick-slider {
     position: relative;
 }
@@ -1243,8 +1246,8 @@ a {
     color: #168352;
 }
 
-// 下層ページ faq
-// ---------------------------------
+/* 下層ページ faq */
+/* --------------------------------- */
 .faq {
     &__main {
         margin-top: vw(63);
@@ -1374,7 +1377,7 @@ a {
     }
     &__accordion-content {
         padding: vw(1) vw(22) vw(16) vw(23);
-        display: block;
+        display: none;
         border-top: none;
         line-break: anywhere;
         @include mq() {
@@ -1390,7 +1393,6 @@ a {
         }
     }
 }
-
 .faq2 {
     margin-bottom: vw(26);
     @include mq() {

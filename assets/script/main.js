@@ -1,6 +1,5 @@
 // ハンバーガー
 $(".hamburger-button").on("click", function() {
-    console.log("run")
     $(".nav__group").fadeToggle(300);
     $(".nav__group").css("display", "flex")
 });

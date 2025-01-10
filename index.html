@@ -76,7 +76,7 @@
             </h2>
             <div class="about__body">
                 <div class="about__body-content">
-                    <p class="about__body-content-title"><span>キラメキファームは、これからの農業を</span><span>次世代の子どもたちに残すために<wbr></span><span>創設されたイノベーションカンパニーです。</span></p>
+                    <p class="about__body-content-title"><span>キラメキファームは、これからの農業を</span><span>次世代の子どもたちに残すために</span><span class="block">創設されたイノベーションカンパニーです。</span></p>
                     <p class="about__body-content-text"><span>キラメキファームは革新的デザインと最新技術を活用した農</span><span>業機器メーカーです。未来の農業を実現するために、ビッグ</span><span>データを駆使して省エネルギー・効率化を実現し、自動運転</span><span>技術を搭載したロボットで一年中稼働することができる機器</span><span>を提供します。リジェネラティブ農業を実現する技術を用い</span><span>て、持続可能な農業システムをサポートします。私たちの社</span><span>是は、次世代の子供たちに豊かな地球環境を残すこと。イノ</span><span>ベーションを起こすことで農業に新たな価値を生み出し、地</span><span>球環境保全に貢献することを目指しています。</span></p>
                 </div>
                 <div class="about__body-img">
@@ -130,7 +130,7 @@
                         <a class="products__contents-item">
                             <picture>
                                 <source srcset="/assets/image/top/produces_pc_01.jpg" media="(min-width: 768px)">
-                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_01.jpg" alt="">
+                                <img class="products__contents-item-img" src="/assets/image/top/produces_sp_01.jpg" alt="">
                             </picture>
                             <div class="products__contents-item-text-wrapper">
                                 <p class="products__contents-item-text">エネルギーセイバー</p>
@@ -140,7 +140,7 @@
                         <a class="products__contents-item">
                             <picture>
                                 <source srcset="/assets/image/top/produces_pc_02.jpg" media="(min-width: 768px)">
-                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_02.jpg" alt="">
+                                <img class="products__contents-item-img" src="/assets/image/top/produces_sp_02.jpg" alt="">
                             </picture>
                             <div class="products__contents-item-text-wrapper">
                                 <p class="products__contents-item-text">
@@ -153,21 +153,21 @@
                         <a class="products__contents-item">
                             <picture>
                                 <source srcset="/assets/image/top/produces_pc_03.jpg" media="(min-width: 768px)">
-                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_03.jpg" alt="">
+                                <img class="products__contents-item-img" src="/assets/image/top/produces_sp_03.jpg" alt="">
                             </picture>
                             <p class="products__contents-item-text">フューチャーファームマスター</p>
                         </a>
                         <a class="products__contents-item">
                             <picture>
                                 <source srcset="/assets/image/top/produces_pc_04.jpg" media="(min-width: 768px)">
-                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_04.jpg" alt="">
+                                <img class="products__contents-item-img" src="/assets/image/top/produces_sp_04.jpg" alt="">
                             </picture>
                             <p class="products__contents-item-text">ミラクルグローアシスト</p>
                         </a>
                         <a class="products__contents-item">
                             <picture>
                                 <source srcset="/assets/image/top/produces_pc_05.jpg" media="(min-width: 768px)">
-                                <img class="products__contents-item-img" src="assets/image/top/produces_sp_05.jpg" alt="">
+                                <img class="products__contents-item-img" src="/assets/image/top/produces_sp_05.jpg" alt="">
                             </picture>
                             <p class="products__contents-item-text">インテリジェントプランター</p>
                         </a>
@@ -260,17 +260,23 @@
                         <a href="#" class="news__contents-item-text">キラメキファーム、無農薬野菜で子供たちの未来を支える</a>
                     </li>
                 </ul>
-                <a href="#" class="news__button">ニュース一覧へ</a>
+                <a href="/news" class="news__button">ニュース一覧へ</a>
             </div>
         </section>
     </main>
     <!-- フッター -->
     <footer class="footer">
-        <div class="footer__container">
-            <a href="/price/" class="footer__text">価格・スペック</a>
-            <p class="footer__line"></p>
-            <a href="/faq/" class="footer__text">よくあるご質問</a>
-        </div>
+        <ul class="footer__container">
+            <li class="footer__item">
+                <a href="/price" class="footer__text">価格・スペック</a>
+            </li>
+            <li>
+                <p class="footer__line"></p>
+            </li>
+            <li class="footer__item">
+                <a href="/faq" class="footer__text">よくあるご質問</a>
+            </li>
+        </ul>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
