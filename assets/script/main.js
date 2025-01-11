@@ -1,14 +1,11 @@
 // ハンバーガー
 $(".hamburger-button").on("click", function() {
-    $(".nav__group").fadeToggle(300);
-    $(".nav__group").css("display", "flex")
+    $(".nav__group").toggleClass("nav__group-active");
 });
 
 // 画面幅を変更したときにメニューを閉じる
 $(window).on('resize', function() {
-    if ($(window).width() > 767) {
-        $('.nav__group').css("display", "none")
-    }
+    $(".nav__group").removeClass("nav__group-active");
 });
 
 // カルーセル
