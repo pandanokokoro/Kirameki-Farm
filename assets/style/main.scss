@@ -18,7 +18,7 @@ $breakpoint-md: 768;
 $breakpoint-lg: $pc-content-width;
 // 本番用か否か？本番用の場合は1にする。
 // 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
-$production: 1;
+$production: 0;
 
 
 //-----------------------------------------------------
@@ -187,7 +187,7 @@ a {
             position: relative;
         }
         &-img {
-            width: vw(358);
+            width: 100%;
             height: vw(230);
             margin-bottom: vw(27);
             @include mq() {
@@ -437,7 +437,7 @@ a {
     }
     &__cover {
         margin-top: vw(25);
-        width: vw(358);
+        width: 100%;
         height: vw(450);
         @include mq() {
             margin-top: mvw(25);
@@ -488,7 +488,7 @@ a {
         }
 
         &-content {
-            width: vw(358);
+            width: 100%;
             height: vw(481);
             padding: vw(15) vw(24);
             border-radius: vw(32) vw(32) vw(32) vw(32);
@@ -587,7 +587,7 @@ a {
             }
         }
         & img {
-            width: vw(358);
+            width: 100%;
             border-top-left-radius: vw(24);
             border-top-right-radius: vw(24);
             @include mq() {
@@ -763,7 +763,7 @@ a {
                 }
             }
             &-img {
-                width: vw(358);
+                width: 100%;
                 border-radius: vw(24);
                 margin-bottom: vw(9);
                 @include mq() {
@@ -994,7 +994,7 @@ a {
             border-radius: vw(24);
         }
         &-slide-item img {
-            width: vw(358);
+            width: 100%;
             height: vw(236);
             border-radius: vw(24);
             @include mq() {
@@ -1041,7 +1041,7 @@ a {
                     width: mvw(246);
                 }
                 &-img {
-                    width: vw(358);
+                    width: 100%;
                     height: vw(200);
                     margin-bottom: vw(10);
                     @include mq() {
@@ -1169,7 +1169,7 @@ a {
         &-table {
             display: grid;
             grid-template-columns: 1fr;
-            border: 1px solid #ddd;
+            // border: 1px solid #ddd;
             border-bottom: none;
             background-color: #fff;
             font-size: vw(16);
@@ -1182,7 +1182,8 @@ a {
 
             &-item {
                 height: vw(38);
-                border-bottom: 1px solid #ddd;
+                border: 1px solid #ddd;
+                border-bottom: none;
                 padding: vw(10) vw(10) vw(10) vw(19);
                 @include mq() {
                     height: mvw(62);
@@ -1203,6 +1204,7 @@ a {
                     height: vw(40);
                 }
                 &.row9 {
+                    border-bottom: 1px solid #ddd;
                     height: vw(40);
                 }
                 &.row2,
@@ -1216,13 +1218,9 @@ a {
                     }
                 }
                 &.head {
-                    // height: vw(40);
                     font-weight: 700;
                     background-color: #f5f5f5;
-                    border-right: 1px solid #ddd;
-                    // @include mq() {
-                    //     height: mvw(62);
-                    // }
+                    border-right: none;
                 }
             }
             @include mq() {
@@ -1269,6 +1267,7 @@ a {
 }
 .slick-dots li button::before {
     color: #eee;
+    opacity: 1;
     font-size: vw(10);
     @include mq() {
         font-size: mvw(10);
@@ -1276,6 +1275,7 @@ a {
 }
 .slick-dots li.slick-active button:before {
     color: #168352;
+    opacity: 1;
 }
 
 /* 下層ページ faq */
@@ -1307,7 +1307,7 @@ a {
         background: #fff;
         border: 1px solid #ddd;
         border-radius: vw(16);
-        margin-bottom: vw(27);
+        margin-bottom: vw(22);
         overflow: hidden;
         @include mq() {
             border-radius: mvw(16);
@@ -1322,7 +1322,7 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: vw(19) vw(23) vw(0) vw(23);
+        padding: vw(19) vw(23) vw(16) vw(23);
         cursor: pointer;
         @include mq() {
             padding: mvw(20) mvw(23) mvw(0) mvw(30);
@@ -1412,6 +1412,7 @@ a {
         display: none;
         border-top: none;
         line-break: anywhere;
+        margin-top: -15px;
         @include mq() {
             padding: mvw(1) mvw(30) mvw(18) mvw(30);
         }
@@ -1426,19 +1427,19 @@ a {
     }
 }
 .faq2 {
-    margin-bottom: vw(26);
+    margin-bottom: vw(22);
     @include mq() {
         margin-bottom: mvw(22);
     }
 }
 .faq3 {
-    margin-bottom: vw(26);
+    margin-bottom: vw(21);
     @include mq() {
         margin-bottom: mvw(23);
     }
 }
 .faq4 {
-    margin-bottom: vw(26);
+    margin-bottom: vw(22);
     @include mq() {
         margin-bottom: mvw(22);
     }
@@ -1450,7 +1451,7 @@ a {
     }
 }
 .faq5 {
-    margin-bottom: vw(25);
+    margin-bottom: vw(22);
     @include mq() {
         margin-bottom: mvw(25);
     }
@@ -1469,7 +1470,7 @@ a {
     }
 }
 .faq6 {
-    margin-bottom: vw(25);
+    margin-bottom: vw(22);
     @include mq() {
         margin-bottom: mvw(25);
     }
@@ -1484,7 +1485,7 @@ a {
     }
 }
 .faq7 {
-    margin-bottom: vw(25);
+    margin-bottom: vw(23);
     @include mq() {
         margin-bottom: mvw(25);
     }
@@ -1505,7 +1506,7 @@ a {
     }
 }
 .faq8 {
-    margin-bottom: vw(26);
+    margin-bottom: vw(22);
     @include mq() {
         margin-bottom: mvw(24);
     }
@@ -1525,7 +1526,7 @@ a {
     }
 }
 .faq9 {
-    margin-bottom: vw(24);
+    margin-bottom: vw(20);
     @include mq() {
         margin-bottom: mvw(24);
     }
@@ -1540,7 +1541,7 @@ a {
     }
 }
 .faq10 {
-    margin-bottom: vw(24);
+    margin-bottom: vw(22);
     @include mq() {
         margin-bottom: mvw(24);
     }
